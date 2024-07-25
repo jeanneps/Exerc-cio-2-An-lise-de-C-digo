@@ -1,0 +1,125 @@
+/* indica que o tamanho da caixa levara em conta  até borda */
+* {
+    box-sizing: border-box
+}
+/*  max-width é a largura maxima.
+position relatice é a posiçao do elemento, com o relative podemos alterar baixo, cima, esquerda e direita.
+margin é a area entre a caixa e a borda da pagina, auto dará uma margin automatica para todos os lados.
+*/
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+/* display especifica como um elemento deve ser exibido
+none o elemento é completamente removido */
+.mySlides {
+    display: none;
+}
+/* cursor pointer faz seleciona o item e aparece uma mãosinha
+position absolute especifica o posisionamento usado no elemento
+top define o top superior
+width largura horizontal automatica
+margin top define a margin superior do elelmento 
+padding o preencimento do elelmento
+color é a cor
+font weight para definir se são grossos ou finos os elementos
+font size tamanho da font
+transition---------------
+radius arrendonda as bordas do elemento
+user select o elemento não pode ser selecionado */
+.anterior,
+.proximo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/* right define a posição do elelmento, alinhar do lado direito 
+radius arrendonda as bordas do elemento*/
+.proximo {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* houver é ativado quando o usuario passa o mouse em cima do elemento 
+backgoroud define a cor de fundo quando o houver estiver ativo */
+.anterior:hover,
+.proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* cor da letra do elemento
+tamanho da fonte
+preenchimento
+position absolute especifica o posisionamento usado no elemento
+botton define a distencia superior do elemento
+width  definir a largura horizontal, faz com que ele ocupe toda a largura disponivel do seu container
+text align alinha o texto no centro
+ */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+/*cor da letra do elemento
+tamanho da fonte
+preenchimento
+position absolute especifica o posisionamento usado no elemento
+top define o top superior */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+/* cursor pointer faz seleciona o item e aparece uma mãosinha
+define a largura vertical
+define a largura horizontal 
+margin é a area entre a caixa e a borda da pagina
+cor de fundo
+radius arrendonda as bordas do elemento
+display define como um elemento deve ser exibido,------- */
+.ponto {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* houver é ativado quando o usuario passa o mouse em cima do elemento 
+backgoroud define a cor de fundo quando o houver estiver ativo */
+.active,
+.ponto:hover {
+    background-color: #717171;
+}
+/* criam uma animação com duração personalizada que desaparece gradualmente */
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+/* animação personalizada, opacite é a opacidade do elemento, relativamente transparente */
+@keyframes fade {
+    from {
+        opacity: .2
+    }
+
+    to {
+        opacity: 1
+    }
+}
